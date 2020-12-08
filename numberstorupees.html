@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+        margin:0;
+        padding: 0;
+         }
+    .container{
+        
+        height: auto;
+        border:1px solid black;
+        margin:100px auto;
+        
+    }
+    .flex{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .font1{
+            font-size:20vh;
+            font-weight:bold;
+            background-color:gainsboro;
+        }
+         ter{
+            text-align:center;
+        }
+        .height{
+            
+            height:10vh;
+        }
+        .demo{
+            
+            background-color: blue;
+        }
+        #input{
+            font-size: 30px;
+            height:60px;
+            border: solid;
+        
+        }
+        .display{
+            height:25vh;
+        }
+        .center{
+            text-align: center;
+            background-color: ;
+            font-size: 50px;
+        }
+        .bg-silver{
+            background-color:green;
+        }
+        .headder{
+            background-color:rgb(253, 122, 8);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="headder cenetr">
+            <h1 class="center">ENTER THE NUMBER</h1>
+        </div>
+        <div class="display font1 flex"  >
+            
+        </div>
+        <div class="plain flex height bg-silver">
+            <div class="input flex">
+                <input type="text" id="input"  oninput="comma()">
+            </div>
+         </div> 
+
+    </div>
+    <script>
+        
+        let j="";
+        let m="";
+
+    function comma(){
+        let s=document.getElementById("input").value
+        let arr=s.split("")
+        let comm=0; 
+        let currentIndex=s.length%2
+        let arrIndex = currentIndex
+        for(let i=0;(s.length-currentIndex)>3;i++){
+            console.log(arr,s.length-currentIndex)
+            arr.splice(arrIndex+1,0,",")
+             comm++;
+             arrIndex=currentIndex+(comm+2)
+            currentIndex += 2
+         }
+       return  document.querySelector(".display").innerHTML=arr.join("")
+       j=arr.join("");
+       
+        }
+        
+
+
+
+
+ </script>
+    
+</body>
+</html>
