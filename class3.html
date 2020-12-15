@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+    table, th, td {
+        width:300px;
+        border: 1px solid black;
+    }
+    tr{
+        height: 30px;
+    }
+     
+     </style>
+    <title>Document</title>
+</head>
+<body>
+<div class="conatiner">
+    <h1>Enter the Capsule Details</h1>
+      <table id="vv">
+         <tr>
+            <th>Nmae</th>
+            <th>Type</th>
+            <th>Quantity</th>
+         </tr>
+         <tr>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"  id="demo" onblur="send()"></td>
+         </tr>
+         
+         
+      </table>
+    </div>
+<script>
+    document.getElementById("demo").addEventListener("blur",send );
+
+/*function send()
+{
+    var x=document.getElementById('vv').insertRow();
+    var c1=x.insertCell(0);
+    var c2=x.insertCell(1);
+    var c3=x.insertCell(2);
+    c1.innerHTML=`<td><input type="text"></td>`;
+    c2.innerHTML=`<td><input type="text"></td>`;
+    c3.innerHTML=`<input type="text" onblur="send()">`;
+}*/
+function do(){
+    return `
+}
+
+</script>
+</body>
+</html>

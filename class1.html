@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slide bar </title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+
+        }
+        .mainbar{
+            height:60px;
+            background-color: blue;
+        }
+        .menu{
+            width:60px;
+            height:60px;
+            background-color: chartreuse;
+            cursor: pointer;
+        }
+        .imagemenu{
+            width:60px;
+            height:60px;
+        }
+        .setting{
+            width:100vh;
+            height:500px;
+        }
+        .content{
+            
+        } 
+        .sidebar{
+
+        }
+        .left{
+            
+            margin-right:100px;
+        }
+        
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color:lavender;
+   overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  font-size: 30px;
+}
+.main {
+   /* Same as the width of the sidenav */
+  font-size: 40px;
+  padding:10px ;
+  transition: margin-left;
+}
+.sidebar div{
+    padding:10px 20px 50px  ;
+    transition: 0.3s;
+}
+
+.sidebar div:hover{
+    color: honeydew;
+}
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+    <div class="conatiner">
+        
+        <div class="mainbar">
+            <div class="menu" >
+                <div>
+                <img src="menuimg.png" class="imagemenu" alt="Menu">
+                </div>
+            </div>
+                <div>
+                    <div class="sidebar" id="mySidebar" >
+                        <div class="closebtn" onclick="cccc()">×</div>
+                        <div>Bengalore</div>
+                        <div>Hubli</div>
+                        <div>Pune</div>
+                        <div>Hydrabad</div>
+                    </div>
+                     
+                        
+                    <div class="main" id="main" >
+                        <div>
+                        <img src="image2.jpg" class="setting" alt="place">
+                        </div>
+                         <div class="explantion">
+                        <h1>RAJASTHAN</h1>
+                        <P> One Of the beautiful place to In RAJASTHAN There are so many beautiful place </P>
+                     </div>
+                </div>
+    
+
+        </div>
+        
+    </div>
+    <script>
+        
+                document.addEventListener("keypress" ,show)
+
+        function openc() {
+                     document.getElementById("mySidebar").style.width = "250px";
+                     document.getElementById("main").style.marginLeft = "250px";
+            }
+
+        function cccc() {
+                 document.getElementById("mySidebar").style.width = "0";
+                document.getElementById("main").style.marginLeft= "0";
+            }
+        function show(e){
+            if(e.keyCode==13){
+                openc();
+                
+            }
+
+        }
+
+
+    
+    </script>
+    
+</body>
+</html>
